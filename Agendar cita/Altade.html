@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dar de Alta Docente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="titulo">
+        <h1>Dar de Alta Docente</h1>
+    </div>
+    <center> </center>
+    <div class="container">
+       
+        <div class="form-section">
+            <form action="" method="post" name="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombres" required>
+
+                <label for="apellido">Hora:</label>
+                <input type="time" name="hora" required>
+
+                <label for="correo">Fecha:</label>
+                <input type="date" name="fecha" required>
+
+                <label for="curp">CURP:</label>
+                <input type="text" name="curps" min="ascd" max="asdfgtvcdsderfgtre"required>
+
+                <label for="numero_personal">Número de Personal:</label>
+                <input type="number" name="numero" min="100" max="9999999" required>
+
+                <button type="submit" value="submit" class="btn-red">Dar de Alta Docente</button>
+            </form>
+        </div>
+      
+    </div>
+    <div class="photo-section">
+        <label>Foto de Usuario:</label>
+        <div class="photo-container">
+            <img src="user-icon.png" id="photo-preview" alt="Foto de Usuario">
+            <input type="file" id="photo" name="photo" accept="image/*" onchange="previewImage(event)">
+        </div>
+    </div>
+    <script src="base.js"></script>
+</body>
+</html>

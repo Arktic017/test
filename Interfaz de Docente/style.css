@@ -1,0 +1,234 @@
+.Datos{
+    position: absolute;
+    top: 50%;
+    left: 74%;
+    transform: translate(-50%, -53.4%);
+}
+
+.llave{
+    position: absolute;
+    left: 40%;
+}
+.lla{
+    cursor: pointer;
+}
+
+.regre{
+    position: absolute;
+    top: 90%;
+    left: 2.5%;
+   
+}
+.sar{
+    padding: 18px 40px;
+    background-color: aqua;
+    border-radius: 40px;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+.te{
+    position: absolute;
+    top: 87%;
+    left: 70%;
+    color: red;
+}
+.textoo{
+    position: absolute;
+    top: 46%;
+    left: 40%;
+    color: red;
+}
+
+.imprimir{
+    position: absolute;
+    top: 85%;
+    left: 84%;
+}
+.impri{
+    padding: 38px 1px;
+    background-color: transparent;
+    color: transparent;
+    border:none ;
+    cursor: pointer;  
+}
+
+.historial{
+    position: absolute;
+    top: 57%;
+    left: 44.5%;
+    
+    
+}
+
+.deci{
+    padding: 40px 1px;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.agenda{
+    position: absolute;
+    top: 43%;
+    left: 18.5%;
+    transform: translate(-60%, -41%);
+}
+.Datos form{
+
+    width: 150%;
+
+    padding: 87px 0 18px;
+    box-sizing: border-box;
+}
+.texto{
+
+    position: absolute;
+    top: 22%;
+    left: 37%;
+
+
+}
+.btn{
+    position: absolute;
+    top: 35%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.agen{
+
+    background-color: #FFCC00;
+    padding: 1px 38px;
+    border: 0px;
+    color: black;
+    cursor: pointer;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+form .CajaCorreo{
+
+    width: 100%;
+    
+    position: relative;
+    border-bottom: 2px solid #562A2A;
+    margin-bottom: 30px;
+}
+
+
+.CajaCorreo input{
+    width: 100%;
+    
+    height: 38px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+
+.CajaCorreo label{
+    position: absolute;
+    top: -23%;
+    left: 5px;
+    color: #DAC9CD;
+    transform: translateY(-30%);
+    font-size: 22px;
+    pointer-events: none;
+    transition: .6s;
+}
+
+
+.CajaCorreo span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background: #F6D6F5;
+    transition: .6s;
+}
+
+
+.CajaCorreo input:focus~label, 
+.CajaCorreo input:focus~label{
+    top: -20px;
+    color: #F6D6F5;
+}
+
+
+.CajaCorreo input:focus~span::before,
+.CajaCorreo input:focus~span::before{
+    width: 100%;
+}
+
+
+form .CajaCurp{
+
+    width: 100%;
+  
+    position: relative;
+    border-bottom: 2px solid #562A2A;
+    margin-bottom: 30px;
+}
+
+
+.CajaCurp input{
+    width: 100%;
+    
+    height: 38px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+
+.CajaCurp label{
+    position: absolute;
+    top: -23%;
+    left: 5px;
+    color: #DAC9CD;
+    transform: translateY(-30%);
+    font-size: 22px;
+    pointer-events: none;
+    transition: .6s;
+}
+
+
+.CajaCurp span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background: #F6D6F5;
+    transition: .6s;
+}
+
+
+.CajaCurp input:focus~label, 
+.CajaCurp input:focus~label{
+    top: -20px;
+    color: #F6D6F5;
+}
+
+
+.CajaCurp input:focus~span::before,
+.CajaCurp input:focus~span::before{
+    width: 100%;
+
+}
+

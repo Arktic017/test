@@ -1,0 +1,99 @@
+body {
+
+    background-image: url('fondo21\ \(1\).png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.titulo{
+    position: absolute;
+    top: 7%;
+}
+.container {
+    position: absolute;
+    top: 30%;
+   right: 75%;
+    background:transparent;
+    padding: 10px;
+    border-radius: 20px;
+ 
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.form-section, .photo-section{
+    position:absolute ;
+    top: 40%;
+    left: 30%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form {
+    
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* 100% width minus padding and border */
+}
+
+.photo-section {
+    text-align: center;
+}
+
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#photo-preview {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 10px auto;
+}
+
+.btn-red {
+    padding: 10px;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    width: calc(100% - 22px);
+}
+
+.btn-red:hover {
+    background-color: #c82333;
+}

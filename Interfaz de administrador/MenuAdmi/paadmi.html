@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>administradorprin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <center> <h1>Administrador</h1></center>
+
+   <div class="btnCa">
+    <button class="cambiar">Cambiar datos de Inicio de Sesion</button>
+   </div>
+
+
+    <div class="container">
+
+        <div class="appointments">
+
+            <h2>Gestión de Citas</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>   Citas por Aceptar</th>
+                        
+                      <th>    Citas Aceptadas</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+
+                            <form action="" method="post">
+                                <label for="patient">Paciente:</label>
+                                <input type="text" id="patient" name="patient" required>
+                                
+                                <label for="date">Fecha:</label>
+                                <input type="date" id="date" name="date" required>
+                                
+                                <label for="time">Hora:</label>
+                                <input type="time" id="time" name="time" required>
+                                
+                                <button type="submit">Aceptar Cita</button>
+                            </form>
+                        </td>
+                        <td>
+                            <ul id="accepted-appointments">
+                                <!-- Aquí se insertarán las citas aceptadas -->
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="patients">
+       <center><h2>Lista de Pacientes</h2></center> 
+        <ul id="patient-list">
+            <!-- Aquí se insertarán los pacientes -->
+        </ul>
+    </div>
+
+</body>
+</html>

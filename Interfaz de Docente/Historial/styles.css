@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.regre{
+    position: absolute;
+    top: 3%;
+    left: 5.8%;
+}
+.sar{
+    padding: 34px 20px;
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+}
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('fondo5.png'); /* Asegúrate de tener esta imagen en tu carpeta de proyecto */
+    background-size: cover;
+   
+    z-index: -1;
+ 
+}
+
+.container {
+    position: absolute;
+    top: 18%;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.appointment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.appointment-list li {
+    position: absolute;
+    top: 15%;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}

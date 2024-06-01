@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin</title>
+    <link rel="stylesheet" href="LoginAdminCss.css">
+    <style>
+        body{
+            background-image: url('LoginAdmin.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="Datos">
+        <h1 class="WelcomeTitle">Bienvenido</h1>
+        <h1 class="Login">Inicio de sesión</h1>
+        <h2 class="class">Administrador</h2>
+        <form id="loginForm" method="post">
+            <div class="SetCorreoAdmin">
+                <input id="correo" type="email"required>
+                <label style="color: black;"> Correo </label>
+            </div>
+
+            <div class="SetCurpAdmin">
+                <input id="curp" type="text"required>
+                <label style="color: black;">Curp</label>
+            </div>
+            <button type="submit" value="Entrar" class="BotonEntrar">Entrar</button>
+            
+        </form>
+    </div>
+    <a href="/MainMenu/Inicio.html"><button class="Back">Regresar</button></a>
+    <script src="loginad.js"></script>
+</body>
+</html>

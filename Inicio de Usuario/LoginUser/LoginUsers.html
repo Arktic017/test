@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="LoginUserCss.css">
+    <link rel="icon" href="logomedicronos.ico" type="image/x-icon">
+    <style>
+        body{
+            background-image: url('LoginUser.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="Datos">
+        <h1 class="WelcomeTitle">Bienvenido</h1>
+        <h1 class="Login">Inicio de sesión</h1>
+        <h2 class="class">Usuario</h2>
+        <form id="loginForm">
+            <div class="SetCorreoAdmin">
+                <input name="correo" id="correo" type="email"required>
+                <label style="color: black;"> Correo electronico </label>
+            </div>
+
+            <div class="SetCurpAdmin">
+                <input name="curp" id="curp" type="text"required>
+                <label style="color: black;">Curp</label>
+            </div>
+            <a><button class="BotonEntrar" id="Entrar" type="submit">Entrar</button></a>
+        </form>
+
+        
+    </div>
+    <a href="/MainMenu/Inicio.html"><button class="Back">Regresar</button></a>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var email = document.getElementById('correo').value;
+            var curp = document.getElementById('curp').value;
+
+            fetch('https://script.google.com/macros/s/AKfycbzP87n_7gkJxq8VupfW3mUlDthDHufh0o5MrohHToAkZEtfBSrQwgllvPuZy8qQ-Q6k/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({
+                    correo: email,
+                    curp: curp
+                })
+            })
+            .then(response => response.text())
+            .then(text => {
+                if (text.trim() === 'Login successful') {
+                    window.location.href = 'file:///C:/Users/trist/OneDrive/Escritorio/POO/Interfaz%20de%20Docente/principal.html';
+                } else {
+                    alert('Credenciales inválidas');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

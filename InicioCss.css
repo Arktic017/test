@@ -1,0 +1,28 @@
+.titulo {
+    color: navy;
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+}
+.subtitulo {
+    color: blueviolet;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+}
+.User a{
+    text-decoration: none;
+    position: absolute;
+    font-size: 30px;
+    top: 85%;
+    left: 21%;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.Admin a{
+    text-decoration: none;
+    position: absolute;
+    font-size: 30px;
+    top: 85%;
+    left:70%;
+    color: black;
+    font-family: Arial, sans-serif;
+}

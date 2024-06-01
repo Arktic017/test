@@ -1,0 +1,63 @@
+body {
+    background-image: url("actua_im.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    font-family: "Verdana", sans-serif;
+    
+}
+
+.back {
+    background-color: transparent; /* Color de fondo */
+    border: none; /* Sin borde */
+    display: inline-block; /* Mostrar como bloque en línea */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    position: absolute;
+    top: 20px; /* Ajustar la posición vertical */
+    left: 22px; /* Ajustar la posición horizontal */
+}
+
+.titulo {
+    position: absolute;
+    top: 225px;
+    left: 110px;
+    font-size: 155%;
+}
+
+.subtitulo{
+    position: absolute;
+    top: 325px;
+    left: 125px;
+    font-size: 150%;
+}
+
+.seleccion{
+    font-size: 70%;
+}
+
+.boton-editar {
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 10px 45px; /* Espaciado interno */
+    text-align: center; /* Alineación de texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 2px; /* Margen externo */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    border-radius: 5px; /* Borde redondeado */
+    top: 375px;
+    left: 125px;
+    position: absolute;
+  }
+
+.fa-solid{
+    color: black;
+    font-size: 25px;
+}
+
+  

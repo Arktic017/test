@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-image: url('fondo4.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; 
+            margin: 10; 
+        }
+    </style>
+</head>
+<body>
+    <div class="regre">
+        <button class="sar" onclick="location.href='file:///C:/Users/trist/OneDrive/Escritorio/POO/Inicio%20de%20Usuario/LoginUser/LoginUsers.html'">Regresar</button>
+    </div>
+
+    <div class="te"><h2>Imprimir Citas</h2></div>
+    <div class="textoo"><h2>Historial de Citas Pasadas</h2></div>
+
+    <div class="imprimir">
+        <button class="impri">Imprimir Citas</button>
+    </div>
+
+    <div class="historial">
+        <a href="/Interfaz de Docente/Historial/historial.html"><button class="deci" >Historial de Citas</button></a>
+        
+    </div>
+    
+    <center> <h1 class="cita">Cita Medica</h1></center>
+
+    <div class="texto">
+       <h3>¿Tienes una cita o quieres agendar una?</h3>
+    </div>
+
+    <div class="btn">
+        <button class="agen"  onclick="location.href='file:///C:/Users/trist/OneDrive/Escritorio/POO/Agendar%20cita/Altade.html'"><h3>AGENDAR YA</h3></button> 
+    </div>
+
+    <div class="llave">
+        <label for="no_personal">Número Personal:</label>
+        <input type="text" id="no_personal" name="no_personal" placeholder="Ingresa tu número personal" title="Ingresa tu número personal" required>
+        <button class="lla" id="iniciar">Iniciar</button>
+    </div>
+
+    <div class="agenda">
+        <h1>Citas Agendadas </h1>
+        <form method="post">
+            <div class="CajaCorreo">
+                <label for="cita1">Cita 1:</label>
+                <input type="email" id="cita1" name="cita1" readonly required placeholder="Cita 1" title="Cita 1">
+            </div>
+
+            <div class="CajaCurp">
+                <label for="cita2">Cita 2:</label>
+                <input type="text" id="cita2" name="cita2" readonly required placeholder="Cita 2" title="Cita 2">
+            </div>
+
+            <div class="CajaCurp">
+                <label for="cita3">Cita 3:</label>
+                <input type="text" id="cita3" name="cita3" readonly required placeholder="Cita 3" title="Cita 3">
+            </div>
+
+            <div class="CajaCurp">
+                <label for="cita4">Cita 4:</label>
+                <input type="text" id="cita4" name="cita4" readonly required placeholder="Cita 4" title="Cita 4">
+            </div>
+
+            <div class="CajaCurp">
+                <label for="cita5">Cita 5:</label>
+                <input type="text" id="cita5" name="cita5" readonly required placeholder="Cita 5" title="Cita 5">
+            </div>
+        </form>
+    </div>
+
+    <div class="Datos">
+        <form method="post">
+            <div class="CajaCorreo">
+                <label for="correo">Correo:</label>
+                <input name="correo" id="correo" type="email" readonly required placeholder="Correo electrónico" title="Correo electrónico">
+            </div>
+
+            <div class="CajaCurp">
+                <label for="CURP">CURP:</label>
+                <input name="CURP" id="CURP" type="text" readonly required placeholder="CURP" title="CURP">
+            </div>
+
+            <div class="CajaCurp">
+                <label for="Nombre">Nombre:</label>
+                <input name="Nombre" id="Nombre" type="text" readonly required placeholder="Nombre" title="Nombre">
+            </div>
+
+            <div class="CajaCurp">
+                <label for="Apellido">Apellido:</label>
+                <input name="Apellido" id="Apellido" type="text" readonly required placeholder="Apellido" title="Apellido">
+            </div>
+
+            <div class="CajaCurp">
+                <label for="No">Número:</label>
+                <input name="No" id="No" type="text" readonly required placeholder="Número" title="Número">
+            </div>
+        </form>
+    </div>
+
+    <div id="resultado"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Load stored input values
+            loadStoredValues();
+
+            document.getElementById("iniciar").addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the default action of the button
+
+                var noPersonal = document.getElementById("no_personal").value;
+                var url = "https://prod-180.westus.logic.azure.com:443/workflows/3f926545f8ab4b009998a3e3919048b2/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=b0MvM3aJMpoWTBVsR0yD4mDDoiYHGLk2U17E-Hzg5r0"; // Replace with the actual URL
+
+                // Define the request body JSON object
+                var requestBody = {
+                    "no_personal": noPersonal
+                };
+
+                fetch(url, {
+                    method: 'POST', // Specify the HTTP method as POST
+                    body: JSON.stringify(requestBody), // Convert the request body to JSON format
+                    headers: {
+                        'Content-Type': 'application/json' // Set the content type header to indicate JSON format
+                    }
+                })
+                .then(response => response.json())
+                .then(data => handleResponse(data))
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    alert("There was a problem fetching data.");
+                });
+            });
+
+            // Function to handle the response from the fetch request
+            function handleResponse(data) {
+                if (data && data.success) {
+                    var correo = data.correo;
+                    var CURP = data.CURP;
+                    var nombre = data.Nombre;
+                    var apellido = data.Apellido;
+                    var numero = data.No;
+
+                    document.getElementById("correo").value = correo;
+                    document.getElementById("CURP").value = CURP;
+                    document.getElementById("Nombre").value = nombre;
+                    document.getElementById("Apellido").value = apellido;
+                    document.getElementById("No").value = numero;
+
+                    // Update the scheduled appointments
+                    document.getElementById("cita1").value = data.Cita1;
+                    document.getElementById("cita2").value = data.Cita2;
+                    document.getElementById("cita3").value = data.Cita3;
+                    document.getElementById("cita4").value = data.Cita4;
+                    document.getElementById("cita5").value = data.Cita5;
+
+                    // Save values to localStorage
+                    saveValuesToLocalStorage();
+                } else {
+                    console.error('Failed to retrieve data.');
+                    alert("There was a problem retrieving data.");
+                }
+            }
+
+            function saveValuesToLocalStorage() {
+                var inputs = document.querySelectorAll('input');
+                inputs.forEach(input => {
+                    localStorage.setItem(input.id, input.value);
+                });
+            }
+
+            function loadStoredValues() {
+                var inputs = document.querySelectorAll('input');
+                inputs.forEach(input => {
+                    var storedValue = localStorage.getItem(input.id);
+                    if (storedValue !== null) {
+                        input.value = storedValue;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

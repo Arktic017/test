@@ -1,0 +1,115 @@
+body {
+
+    background-image: url('fondo2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    margin: 10; 
+    font-family: Arial, sans-serif;
+   
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.appointments {
+    position: absolute;
+
+    top: 70px;
+    background-color: transparent;
+    padding: 60px;
+    border-radius: 5px;
+   
+    width: 50%;
+}
+
+.patients {
+    position: absolute;
+    left: 65%;
+    top: 17.9%;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 5px;
+   
+    width: 28%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+.th td{
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;  
+  
+}
+
+thead {
+    background-color: #f2f2f2;
+  
+}
+
+thead th {
+    text-align: left;
+    padding: 10px;
+   
+}
+
+tbody td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #4cae4c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#patient-list {
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: scroll;
+}
